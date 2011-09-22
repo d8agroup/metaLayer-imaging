@@ -1,5 +1,4 @@
 import socket
-import sys
 
 MASK_ERRORS = True
 
@@ -11,7 +10,6 @@ ERROR_IMAGEERROR = { 'status':'failed', 'code':102, 'error':'The image supplied 
 
 
 #IMAGE PROCESSING
-MAX_COLOR_DEPTH = sys.maxint/100
 MIN_COLOR_COUNT = 100
 
 if socket.gethostname() == 'matt-griffiths':
