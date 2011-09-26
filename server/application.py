@@ -26,10 +26,11 @@ def process_image():
     
     try:
         unsorted_colors = image.getcolors(MAX_COLOR_DEPTH)
-	if unsorted_colors != None:
-            colors = sorted(unsorted_colors, key=lambda color: color[0] * -1)
-        if MIN_COLOR_COUNT > 0:
-            colors = [color for color in colors if color[0] >= MIN_COLOR_COUNT]
+        if unsorted_colors != None:
+            if SORT_COLORS:
+                colors = sorted(unsorted_colors, key=lambda color: color[0] * -1)
+            if MIN_COLOR_COUNT > 0:
+                colors = [color for color in colors if color[0] >= MIN_COLOR_COUNT]
     except MemoryError, e:
         if not MASK_ERRORS:
             raise e
