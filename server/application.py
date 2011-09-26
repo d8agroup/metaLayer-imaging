@@ -29,6 +29,8 @@ def process_image():
         if unsorted_colors != None:
             if SORT_COLORS:
                 colors = sorted(unsorted_colors, key=lambda color: color[0] * -1)
+            else
+                colors = unsorted_colors
             if MIN_COLOR_COUNT > 0:
                 colors = [color for color in colors if color[0] >= MIN_COLOR_COUNT]
     except MemoryError, e:
