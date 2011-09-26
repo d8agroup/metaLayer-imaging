@@ -12,7 +12,7 @@ ERROR_IMAGEERROR = { 'status':'failed', 'code':102, 'error':'The image supplied 
 
 #IMAGE PROCESSING
 MAX_COLOR_DEPTH = 16777216
-MIN_COLOR_COUNT = 100
+MIN_COLOR_COUNT = 10
 
 if socket.gethostname() == 'matt-griffiths':
     MASK_ERRORS = False
